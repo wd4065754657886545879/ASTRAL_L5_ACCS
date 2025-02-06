@@ -57,6 +57,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
             transition: all 0.3s ease;
+            z-index: 3;
         }
 
         .button:hover {
@@ -77,6 +78,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 3;
         }
 
         .about-button {
@@ -92,6 +94,7 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
             transition: all 0.3s ease;
+            z-index: 3;
         }
 
         .about-button:hover {
@@ -165,6 +168,7 @@
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
             transition: all 0.3s ease;
             margin-top: 20px;
+            z-index: 3;
         }
 
         .back-button:hover {
@@ -178,19 +182,34 @@
             outline: none;
         }
 
-        /* Hide video iframe behind everything */
-        iframe {
+        /* YouTube Video Background Styles */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind everything else */
+            overflow: hidden;
+        }
+
+        .video-background iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: none;
-            z-index: -1; /* Keeps the iframe behind everything else */
+            visibility: hidden; /* Hide the video */
         }
     </style>
 </head>
 <body>
+    <div class="video-background">
+        <!-- YouTube Video Embed, hidden from view -->
+        <iframe src="https://www.youtube.com/embed/CdbHAzNB1n0?autoplay=1&loop=1&playlist=CdbHAzNB1n0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
     <div class="container">
         <h1>ASTRAL & L5S ACCS</h1>
         <p>Unlock your next level in Gorilla Tag with a premium account</p>
@@ -212,9 +231,6 @@
 
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
-
-    <!-- YouTube Video Embed (Hidden in Background) -->
-    <iframe src="https://www.youtube.com/embed/CdbHAzNB1n0?autoplay=1&loop=1&playlist=CdbHAzNB1n0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
     <script>
         function toggleAbout() {
