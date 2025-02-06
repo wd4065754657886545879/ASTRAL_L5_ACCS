@@ -19,6 +19,7 @@
             flex-direction: column;
             overflow: hidden;
             animation: flicker 1s infinite;
+            position: relative;
         }
 
         @keyframes flicker {
@@ -31,6 +32,8 @@
             text-align: center;
             font-size: 30px;
             animation: glow 1.5s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 2;
         }
 
         @keyframes glow {
@@ -115,6 +118,7 @@
             left: 50%;
             transform: translateX(-50%);
             max-width: 80%;
+            z-index: 3;
         }
 
         .about-section p {
@@ -186,21 +190,20 @@
         }
 
         iframe {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 560px;
-            height: 315px;
+            height: 100%;
             border: none;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>ASTRAL & L5S ACCS</h1>
-        <p>Unlock your next level in Gorilla Tag with a premium account</p>
+        <p>Unlock your next level in Gorilla Tag with a Gorilla Tag account</p>
         <button class="button" onclick="window.open('https://discord.gg/zdCazN4sP4', '_blank')">BUY GORILLA TAG ACCOUNTS</button>
     </div>
 
@@ -220,7 +223,7 @@
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
 
-    <!-- YouTube Video Embed -->
+    <!-- YouTube Video Embed in Background -->
     <iframe src="https://www.youtube.com/embed/CdbHAzNB1n0?autoplay=1&loop=1&playlist=CdbHAzNB1n0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
     <script>
