@@ -124,16 +124,31 @@
             font-size: 18px;
         }
 
-        /* OWNERS Section - Super Cool */
+        /* OWNERS Section - Cool Moving Effect */
         .owners-section {
             font-size: 18px;
             margin-top: 20px;
-            animation: fadeIn 2s ease-in-out;
-            border: 2px solid #ff0080;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 0, 128, 0.8);
             background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: moveLeftRight 15s linear infinite; /* Continuous movement */
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translateX(100%); /* Start from the right */
+            }
+            50% {
+                transform: translateX(-100%); /* Move to the left */
+            }
+            100% {
+                transform: translateX(100%); /* Move back to the right */
+            }
         }
 
         .owners-section h3 {
@@ -148,11 +163,6 @@
             color: #ff00ff;
             font-weight: bold;
             text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Back Button */
@@ -196,9 +206,9 @@
 
     <!-- About Section -->
     <div class="about-section" id="about-section">
-        <p>The accounts will have Gorilla Tag and cosmetics</p>
+        <p>The accounts will have Gorilla Tag and cosmetics.</p>
 
-        <!-- Super Cool OWNERS Section -->
+        <!-- Super Cool OWNERS Section with continuous movement -->
         <div class="owners-section">
             <h3>OWNERS</h3>
             <p>l5fr</p>
@@ -242,4 +252,3 @@
     </script>
 </body>
 </html>
-
