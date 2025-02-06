@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRALS&L5S ACCS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://www.transparenttextures.com/patterns/black-linen.png'), radial-gradient(circle, #3b0a45, #d9007e, #ff0077);
+            background-size: cover;
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            animation: flicker 1s infinite;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 0.7; }
+            100% { opacity: 0.9; }
+        }
+
+        .container {
+            text-align: center;
+            font-size: 30px;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 25px #ff0080, 0 0 35px #ff0080;
+            }
+        }
+
+        .button {
+            background: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 20px 40px;
+            font-size: 24px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #00ff00;
+            color: black;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+        }
+
+        .button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ASTRAL & L5S ACCS</h1>
+        <p>Unlock your next level in Gorilla Tag with a premium account</p>
+        <button class="button" onclick="window.open('https://discord.gg/zdCazN4sP4', '_blank')">BUY GORILLA TAG ACCOUNTS</button>
+    </div>
+</body>
+</html>
