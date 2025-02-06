@@ -182,33 +182,19 @@
             outline: none;
         }
 
-        /* YouTube Video Background Styles */
-        .video-background {
+        /* Video Background Styles */
+        video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Place it behind everything else */
-            overflow: hidden;
-        }
-
-        .video-background iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            object-fit: cover;
+            visibility: hidden; /* Make video invisible */
         }
     </style>
 </head>
 <body>
-    <div class="video-background">
-        <!-- YouTube Video Embed, now visible and playing automatically -->
-        <iframe src="https://www.youtube.com/embed/CdbHAzNB1n0?autoplay=1&loop=1&playlist=CdbHAzNB1n0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-
     <div class="container">
         <h1>ASTRAL & L5S ACCS</h1>
         <p>Unlock your next level in Gorilla Tag with a premium account</p>
@@ -230,6 +216,12 @@
 
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
+
+    <!-- Background Video (Invisible) -->
+    <video autoplay loop muted>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <script>
         function toggleAbout() {
