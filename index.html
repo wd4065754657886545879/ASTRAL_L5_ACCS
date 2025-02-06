@@ -76,6 +76,53 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
+        /* About Button */
+        .about-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .about-button:hover {
+            background-color: #00ff00;
+            color: black;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+        }
+
+        .about-button:focus {
+            outline: none;
+        }
+
+        /* About Section */
+        .about-section {
+            display: none;
+            text-align: center;
+            font-size: 20px;
+            color: #00ff00;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 80%;
+        }
+
+        .about-section p {
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -87,5 +134,33 @@
 
     <!-- Small "Made by WD40" text -->
     <div class="small-text">Made by WD40</div>
+
+    <!-- About Button -->
+    <button class="about-button" onclick="toggleAbout()">About Accounts</button>
+
+    <!-- About Section -->
+    <div class="about-section" id="about-section">
+        <p>The accounts will have Gorilla Tag and cosmetics.</p>
+    </div>
+
+    <script>
+        // Function to toggle the About section visibility
+        function toggleAbout() {
+            const aboutSection = document.getElementById('about-section');
+            const container = document.querySelector('.container');
+            const aboutButton = document.querySelector('.about-button');
+            
+            // If About section is visible, hide everything else
+            if (aboutSection.style.display === 'block') {
+                aboutSection.style.display = 'none';
+                container.style.display = 'block';
+                aboutButton.style.display = 'block';
+            } else {
+                aboutSection.style.display = 'block';
+                container.style.display = 'none';
+                aboutButton.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
