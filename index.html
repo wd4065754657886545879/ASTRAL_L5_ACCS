@@ -123,6 +123,42 @@
         .about-section p {
             font-size: 18px;
         }
+
+        /* Owners Section */
+        .owners-section {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .owners-section p {
+            font-size: 16px;
+            color: #ff0080;
+        }
+
+        /* Back Button */
+        .back-button {
+            background-color: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #00ff00;
+            color: black;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+        }
+
+        .back-button:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -141,6 +177,16 @@
     <!-- About Section -->
     <div class="about-section" id="about-section">
         <p>The accounts will have Gorilla Tag and cosmetics.</p>
+
+        <!-- Owners Section -->
+        <div class="owners-section">
+            <h3>OWNERS</h3>
+            <p>l5fr</p>
+            <p>jmnacurly</p>
+        </div>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="goBack()">Back</button>
     </div>
 
     <script>
@@ -160,6 +206,18 @@
                 container.style.display = 'none';
                 aboutButton.style.display = 'none';
             }
+        }
+
+        // Function to go back to the original content
+        function goBack() {
+            const aboutSection = document.getElementById('about-section');
+            const container = document.querySelector('.container');
+            const aboutButton = document.querySelector('.about-button');
+            
+            // Show the original content and hide the About section
+            aboutSection.style.display = 'none';
+            container.style.display = 'block';
+            aboutButton.style.display = 'block';
         }
     </script>
 </body>
