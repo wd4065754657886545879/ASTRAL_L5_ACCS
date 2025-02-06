@@ -124,15 +124,35 @@
             font-size: 18px;
         }
 
-        /* Owners Section */
+        /* OWNERS Section - Super Cool */
         .owners-section {
             font-size: 18px;
             margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+            border: 2px solid #ff0080;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 128, 0.8);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .owners-section h3 {
+            font-size: 30px;
+            color: #ff0080;
+            text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080;
+            margin-bottom: 15px;
         }
 
         .owners-section p {
-            font-size: 16px;
-            color: #ff0080;
+            font-size: 24px;
+            color: #ff00ff;
+            font-weight: bold;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Back Button */
@@ -176,9 +196,9 @@
 
     <!-- About Section -->
     <div class="about-section" id="about-section">
-        <p>The accounts will have Gorilla Tag and cosmetics.</p>
+        <p>The accounts will have Gorilla Tag and cosmetics</p>
 
-        <!-- Owners Section -->
+        <!-- Super Cool OWNERS Section -->
         <div class="owners-section">
             <h3>OWNERS</h3>
             <p>l5fr</p>
@@ -222,3 +242,4 @@
     </script>
 </body>
 </html>
+
