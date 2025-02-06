@@ -124,7 +124,7 @@
             font-size: 18px;
         }
 
-        /* OWNERS Section - Cool Moving Effect */
+        /* OWNERS Section - Diagonal Cool Moving Effect */
         .owners-section {
             font-size: 18px;
             margin-top: 20px;
@@ -136,18 +136,24 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            animation: moveLeftRight 15s linear infinite; /* Continuous movement */
+            animation: moveDiagonal 10s linear infinite; /* Diagonal Movement */
         }
 
-        @keyframes moveLeftRight {
+        @keyframes moveDiagonal {
             0% {
-                transform: translateX(100%); /* Start from the right */
+                transform: translate(100%, 100%); /* Start at bottom right */
+            }
+            25% {
+                transform: translate(50%, 70%); /* Move up and to the left */
             }
             50% {
-                transform: translateX(-100%); /* Move to the left */
+                transform: translate(0%, 50%); /* Middle of screen */
+            }
+            75% {
+                transform: translate(-50%, 70%); /* Move down and to the left */
             }
             100% {
-                transform: translateX(100%); /* Move back to the right */
+                transform: translate(-100%, 100%); /* Finish at bottom left */
             }
         }
 
@@ -208,7 +214,7 @@
     <div class="about-section" id="about-section">
         <p>The accounts will have Gorilla Tag and cosmetics.</p>
 
-        <!-- Super Cool OWNERS Section with continuous movement -->
+        <!-- Super Cool OWNERS Section with diagonal movement -->
         <div class="owners-section">
             <h3>OWNERS</h3>
             <p>l5fr</p>
