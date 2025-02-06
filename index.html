@@ -67,7 +67,6 @@
             outline: none;
         }
 
-        /* Small text for "Made by WD40" */
         .small-text {
             font-size: 8px;
             color: rgba(0, 255, 0, 0.2); /* Light green with low opacity */
@@ -77,7 +76,6 @@
             transform: translateX(-50%);
         }
 
-        /* About Button */
         .about-button {
             position: fixed;
             top: 10px;
@@ -104,7 +102,6 @@
             outline: none;
         }
 
-        /* About Section */
         .about-section {
             display: none;
             text-align: center;
@@ -124,7 +121,6 @@
             font-size: 18px;
         }
 
-        /* OWNERS Section */
         .owners-section {
             font-size: 18px;
             margin-top: 20px;
@@ -154,7 +150,6 @@
             margin: 5px 0;
         }
 
-        /* Back Button */
         .back-button {
             background-color: transparent;
             color: #00ff00;
@@ -178,44 +173,62 @@
         .back-button:focus {
             outline: none;
         }
+
+        /* Audio Player Styles */
+        .audio-player {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        iframe {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>ASTRAL & L5S ACCS</h1>
-        <p>Unlock your next level in Gorilla Tag with a Gorilla Tag Account</p>
+        <p>Unlock your next level in Gorilla Tag with a premium account</p>
         <button class="button" onclick="window.open('https://discord.gg/zdCazN4sP4', '_blank')">BUY GORILLA TAG ACCOUNTS</button>
     </div>
 
-    <!-- Small "Made by WD40" text -->
     <div class="small-text">Made by WD40</div>
 
-    <!-- About Button -->
     <button class="about-button" onclick="toggleAbout()">About Accounts</button>
 
-    <!-- About Section -->
     <div class="about-section" id="about-section">
         <p>The accounts will have Gorilla Tag and cosmetics.</p>
 
-        <!-- Static OWNERS Section -->
         <div class="owners-section">
             <h3>OWNER</h3>
             <p>l5fr</p>
             <p>jmnacurly</p>
         </div>
 
-        <!-- Back Button -->
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
 
+    <!-- YouTube Video Embed -->
+    <iframe src="https://www.youtube.com/embed/CdbHAzNB1n0?autoplay=1&loop=1&playlist=CdbHAzNB1n0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
     <script>
-        // Function to toggle the About section visibility
         function toggleAbout() {
             const aboutSection = document.getElementById('about-section');
             const container = document.querySelector('.container');
             const aboutButton = document.querySelector('.about-button');
             
-            // If About section is visible, hide everything else
             if (aboutSection.style.display === 'block') {
                 aboutSection.style.display = 'none';
                 container.style.display = 'block';
@@ -227,13 +240,11 @@
             }
         }
 
-        // Function to go back to the original content
         function goBack() {
             const aboutSection = document.getElementById('about-section');
             const container = document.querySelector('.container');
             const aboutButton = document.querySelector('.about-button');
             
-            // Show the original content and hide the About section
             aboutSection.style.display = 'none';
             container.style.display = 'block';
             aboutButton.style.display = 'block';
